@@ -1,0 +1,25 @@
+[package]
+name = "simrs_benchmark"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "simrs_benchmark"
+path = "src/lib.rs"
+
+[[bin]]
+name = "test_sim"
+path = "src/main.rs"
+bench = false
+
+[[bench]]
+name = "main"
+harness = false
+
+[dependencies]
+simrs = "0.1.2"
+
+[dev-dependencies]
+criterion = "0.3.5"
