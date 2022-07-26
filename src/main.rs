@@ -1,8 +1,13 @@
 use simrs_benchmark::test_simulation;
+use simrs_benchmark::simulation;
 
 use std::time::Duration;
 
 fn main() {
+    simulation(50000);
+}
+
+fn testing_simulation() {
     let (mut simulation, count_key) = test_simulation();
     let limit = Duration::from_secs(1002);
     let clock = simulation.scheduler.clock();
