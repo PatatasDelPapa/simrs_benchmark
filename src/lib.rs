@@ -81,7 +81,7 @@ impl Component for Consumer {
 
         let passivated_list = state.get_mut(self.passivated_key).unwrap();
         passivated_list[1] = Passivated::False;
-        
+
         if passivated_list[0] == Passivated::True {
             passivated_list[0] = Passivated::Warned;
             scheduler.schedule_now(producer, ProducerEvent);
